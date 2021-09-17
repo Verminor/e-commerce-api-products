@@ -3,10 +3,8 @@ package br.senac.devweb.apiproduct.categoria;
 import lombok.*;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-import java.util.UUID;
 
 @Getter
 @Setter
@@ -17,10 +15,9 @@ import java.util.UUID;
 public class Categoria {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private UUID id;
+    private Long id;
 
     @NotNull(message = "O campo descrição não pode ser nulo")
-    @NotEmpty(message = "O campo descrição não pode ser vazia")
     @Column
     @Size(max = 30, min = 1, message = "A descrição deve conter de 1 a 30 caracteres")
     private String descricao;
