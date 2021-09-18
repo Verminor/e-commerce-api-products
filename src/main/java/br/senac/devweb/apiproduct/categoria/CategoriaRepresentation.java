@@ -16,7 +16,7 @@ public interface CategoriaRepresentation {
     @Data
     @Getter
     @Setter
-    class Create {
+    class CreateOrUpdate {
 
         @NotNull
         @Size(max = 30, min = 1, message = "A descrição deve conter de 1 a 30 caracteres")
