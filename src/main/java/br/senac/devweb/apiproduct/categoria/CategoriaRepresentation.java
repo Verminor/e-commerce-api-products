@@ -18,7 +18,7 @@ public interface CategoriaRepresentation {
     @Setter
     class CreateOrUpdate {
 
-        @NotNull
+        @NotNull(message="O campo descrição não pode ser nulo")
         @Size(max = 30, min = 1, message = "A descrição deve conter de 1 a 30 caracteres")
         private String descricao;
     }
