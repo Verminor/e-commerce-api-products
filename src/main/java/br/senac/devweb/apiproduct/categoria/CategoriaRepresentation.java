@@ -8,7 +8,6 @@ import lombok.Setter;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.List;
-import java.util.UUID;
 import java.util.stream.Collectors;
 
 public interface CategoriaRepresentation {
@@ -30,13 +29,11 @@ public interface CategoriaRepresentation {
     class Detail {
         private Long id;
         private String descricao;
-        private Categoria.Status status;
 
         public static Detail from(Categoria categoria) {
             return Detail.builder()
                     .id(categoria.getId())
                     .descricao(categoria.getDescricao())
-                    .status(categoria.getStatus())
                     .build();
         }
     }
